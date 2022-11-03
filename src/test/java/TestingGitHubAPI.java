@@ -17,7 +17,7 @@ import java.nio.charset.StandardCharsets;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TesttingGitHubAPI {
+public class TestingGitHubAPI {
 
     /***
      * Testing RESTful APIs with JAVA
@@ -84,6 +84,7 @@ public class TesttingGitHubAPI {
 
     @Test
     public void apiRateLimitExceeded() throws IOException {
+        // just true, when access limit reached
         String name = "alexander-wiltz";
         URL url = new URL("https://api.github.com/users/" + name);
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
